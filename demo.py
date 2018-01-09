@@ -22,11 +22,12 @@ def enterData():
     return s
 
 ## Simple return the text entered in the form
-## Have I imoprted 'request' from Flask?
+## Have I imported 'request' from Flask?
 @app.route('/display', methods=['GET','POST'])
 def simpleFormData():
     if request.method == 'POST':
-        return request.form['dummy']
+    	dummydata = request.form['dummy']
+    	return dummydata
 
 if __name__ == '__main__':
     app.run()
